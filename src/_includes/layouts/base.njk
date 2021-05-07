@@ -1,0 +1,14 @@
+{% from "../header.njk" import header %}
+{% from "../arenaBlock.njk" import arenaBlock %}
+
+<html>
+  <head>
+    <title>Diagram</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+  </head>
+  <body>
+   {% for item in arena | reverse %}
+      {{ arenaBlock(item) }}
+    {% endfor %}
+  </body>
+</html>
